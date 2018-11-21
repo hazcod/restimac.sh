@@ -6,4 +6,4 @@ Script to backup using restic on macOS
 
 `echo 'password-from-above' > backup.pass`
 
-`./restimac.sh MY-WIFI sftp://server/Volumes/Backup/laptop backup.pass`
+`./restimac.sh MY-WIFI sftp:@server:/Volumes/Backup/laptop/restic backup.pass`
