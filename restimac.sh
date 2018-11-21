@@ -30,7 +30,8 @@ Library/
 " >> "$exclusionFile"
 
 echo "Backup up $baseDir to $destination"
-restic \
+/usr/local/bin/restic \
+	--quiet \
 	--repo "$destination" \
 	backup "$baseDir" "$baseDir/Library/Preferences" \
 	--exclude-file="$exclusionFile" \
