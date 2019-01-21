@@ -19,8 +19,8 @@ fi
 # get current WiFi SSID
 ssid=$($airport -I | grep ' SSID' | cut -d ':' -f 2 | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 
-# do nothing when we don't get our wanted SSID
-if [ "$ssid" != "$triggerssid" ]; then
+# check if we get our wanted SSID or 'always'
+if [ "$triggerssid" == "always" ] || [ "$ssid" != "$triggerssid" ]; then
 	exit 0
 fi
 
