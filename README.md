@@ -6,6 +6,6 @@ Use `always` for SSID if you want to always trigger a backup.
 ## Usage
 ```
 restic init --repo sftp://server/Volumes/Backup/laptop`
-echo 'password-from-above' > backup.pass`
+echo 'password-from-above' > backup.pass` && chmod 600 backup.pass
 ./restimac.sh MY-WIFI sftp:@server:/Volumes/Backup/laptop/restic backup.pass
 ```
