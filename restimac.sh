@@ -45,4 +45,5 @@ echo "Backup up $baseDir to $destination"
 	--repo "$destination" \
 	backup "$baseDir" "$baseDir/Library/Preferences" \
 	--exclude-file="$exclusionFile" \
-	--password-file="$passFile"
+	--password-file="$passFile" \
+	--cleanup-cache
